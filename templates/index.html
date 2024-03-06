@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='favicon.ico')}}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='index.css')}}"/>
+    <title>  1997  </title>
+</head>
+<body onload="OnStart()">
+    
+    <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content">
+          <h3 id="h1P">Welcome!</h3>
+          <p id="pP"> * The character, musics, sprites and others are Toby Fox's property. The creator of this site is not the real owner of the resources and assets here used.</p>
+          <button class="button-a" onclick="OpenPopupInit()">Understood!</button>
+        </div>
+      </div>
+
+    <div id="spamton-face">
+        <img id="spamton" src="{{url_for('static', filename='Images/Spamton_0001.png')}}" height="400" width="400" face={{ face }}>
+    </div>
+   <div id="dialog-box">{{ res }}</div>
+   <form method="post" action="#" id="form_">
+
+      <input type="text" id="input-box" name="input-box" placeholder="Your input here..." required>
+      <input id="submit-button" type="submit" value="submit" onclick="submitInput()">
+
+   </form>
+   
+   <script src="{{url_for('static', filename='index.js')}}">
+   </script>
+    <audio src="{{url_for('static', filename='dialtone.mp3')}}" id="music" loop></audio>
+    <audio src="{{url_for('static', filename='Spamton_voice.mp3')}}" id="voice"></audio>
+</body>
+</html>
